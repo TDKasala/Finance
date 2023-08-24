@@ -2,12 +2,14 @@ import math
 # This program will help users to calculate the interest on an investment either simple or compound. It will also help to calculate the amount to repay on a home loan per month.
 # Asking user to choose between 'investment' and 'bond'. Making use of the lower() to avoid errors when user input in different characters
 
+while True:
+    choice = input(
+        "\nChoose either 'investment' or 'bond' from the menu to proceed:").lower()
 
-choice = input(
-    "\nChoose either 'investment' or 'bond' from the menu to proceed:").lower()
-
-print("\ninvestment - to calculate the amount of interest you'll earn on your investment.")
-print("bond       - to calculate the amount you'll have to pay on a home loan.")
+    if choice in ["investment", "bond"]:
+        break
+    else:
+        print("Invalid entry. Please choose 'investment' or 'bond'.")
 
 
 # Declaring variables,casting them and calculation of interest using a nested if statement.
